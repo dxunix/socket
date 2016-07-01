@@ -17,6 +17,9 @@ int main (void)
 
 	printf("Server:\tI am %d\n",  getpid());
 	pid = vfork();
+
+	/*** version new **/
+	
 	if (pid == 0)
 	{
 		/* this is child */
@@ -35,12 +38,12 @@ int main (void)
 	host = gethostbyname("ol7bvm");
 	if (host)
 		printf("%s,%s\n", host->h_name, host->h_addr);
-		
+
 	bzero(&server_addr, sizeof(server_addr));
 //	server_addr.sin_family = AF_INET;
 //	server_addr.sin_addr.s_addr = htol(q
 
 
-	
+
 	printf("Server:\tI am done %d\n", getpid());
 }
